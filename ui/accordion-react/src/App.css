@@ -1,0 +1,71 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  /* justify-content: center; */
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.accordion-item {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4px;
+  padding: 4px 0;
+}
+
+.accordion-item:not(:first-child) {
+  border-top: 1px solid #eee;
+}
+
+.accordion-item-title {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-weight: 500;
+  padding: 4px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.accordion-item-title:hover {
+  background-color: #eee;
+}
+
+.accordion-icon {
+  border: solid currentColor;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  height: 8px;
+  width: 8px;
+  pointer-events: none;
+  transform: translateY(-2px) rotate(45deg);
+}
+
+.accordion-icon--rotated {
+  transform: translateY(2px) rotate(-135deg);
+}
+
+.accordion-item-content {
+  font-size: 14px;
+  padding: 4px;
+  line-height: 1.2em;
+}
